@@ -1,0 +1,122 @@
+/* Import Tailwind CSS */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Dodatkowe style niestandardowe */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(150deg, #ffdc73 25%, #693ecb 100%); /* Gradient od żółtego do fioletowego */
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(107, 70, 193, 0.9); /* Półprzezroczysty fioletowy kolor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.875rem; /* 30px */
+    color: #693ecb; /* Jasny żółty kolor dla tekstu */
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #693ecb; /* Jasny fioletowy kolor dla linków */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #8f68eb; /* Ciemniejszy fioletowy kolor dla linków podczas najechania */
+}
+
+section {
+    margin: 2rem 0;
+}
+
+section h2 {
+    font-size: 2.25rem; /* 36px */
+    color: #6b46c1; /* Fioletowy kolor */
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1rem; /* 16px */
+    color: #4a5568; /* Szary kolor */
+    line-height: 1.75;
+}
+
+section a {
+    background-color: rgba(107, 70, 193, 0.9); /* Fioletowy kolor z 50% kryciem */
+    color: #ffffff; /* Biały kolor dla tekstu */
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+section a:hover {
+    background-color: rgba(156, 56, 172, 0.6); /* Fioletowy kolor z 80% kryciem */
+}
+
+#projects .project-card {
+    background-color: #ffffff; /* Biały kolor dla kart */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#projects .project-card:hover {
+    transform: scale(1.05);
+}
+
+#projects .project-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#projects .project-card h3 {
+    font-size: 1.25rem; /* 20px */
+    color: #6b46c1; /* Fioletowy kolor */
+    margin-bottom: 0.5rem;
+}
+
+#projects .project-card p {
+    font-size: 1rem; /* 16px */
+    color: #4a5568; /* Szary kolor */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 1rem; /* 16px */
+    color: #4a5568; /* Szary kolor */
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d6bcfa; /* Jasny fioletowy kolor */
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    background-color: #d69e2e; /* Żółty kolor */
+    color: #ffffff; /* Biały kolor dla tekstu */
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #b7791f; /* Ciemniejszy żółty kolor */
+}
