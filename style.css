@@ -1,122 +1,299 @@
-/* Import Tailwind CSS */
-@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
-
-/* Dodatkowe style niestandardowe */
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(150deg, #ffdc73 25%, #693ecb 100%); /* Gradient od żółtego do fioletowego */
-    background-attachment: fixed;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Helvetica;
 }
 
+body {
+    background-color: #8159C3;
+}
+
+/*header*/
 header {
-    background-color: rgba(107, 70, 193, 0.9); /* Półprzezroczysty fioletowy kolor */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 22%;
+    background-color: #8159C3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 1.875rem; /* 30px */
-    color: #693ecb; /* Jasny żółty kolor dla tekstu */
+    align-content: center;
 }
 
-header nav ul {
+header ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    position: absolute;
+    right: 20%;
 }
 
-header nav ul li a {
-    color: #693ecb; /* Jasny fioletowy kolor dla linków */
-    transition: color 0.3s;
+header ul li {
+    margin: 0 50px;
 }
 
-header nav ul li a:hover {
-    color: #8f68eb; /* Ciemniejszy fioletowy kolor dla linków podczas najechania */
+nav {
+    display: flex;
+    align-items: center;
 }
 
-section {
-    margin: 2rem 0;
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
-section h2 {
-    font-size: 2.25rem; /* 36px */
-    color: #6b46c1; /* Fioletowy kolor */
-    margin-bottom: 1rem;
+/*main*/
+.main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15%;
+    padding-bottom: 40px;
+    border-radius: 0% 0% 100% 100%/0% 0% 40% 40%
 }
 
-section p {
-    font-size: 1rem; /* 16px */
-    color: #4a5568; /* Szary kolor */
-    line-height: 1.75;
+.main h1 {
+    color: #8159C3;
+    margin: 20px 0px;
 }
 
-section a {
-    background-color: rgba(107, 70, 193, 0.9); /* Fioletowy kolor z 50% kryciem */
-    color: #ffffff; /* Biały kolor dla tekstu */
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s;
+.main p{
+    text-align: center;
+    width: 70%;
 }
 
-section a:hover {
-    background-color: rgba(156, 56, 172, 0.6); /* Fioletowy kolor z 80% kryciem */
+.line {
+    width: 60%;
+    height: 5px;
+    background: #8159C3;
+    margin-top: 50px;
+    border-radius: 5px / 50%;
 }
 
-#projects .project-card {
-    background-color: #ffffff; /* Biały kolor dla kart */
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+/*container*/
+.container {
+    background-color: #8159C3;
+    min-height: 700px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15%;
 }
 
-#projects .project-card:hover {
-    transform: scale(1.05);
+.container .line {
+    background: white;
 }
 
-#projects .project-card img {
+/*kafel*/
+.kafel {
+    display: flex;
+    padding: 20px;
+    margin: 30px 0px;
+    width: 80%;
+    background-color: #F5CCFF;
+    height: 350px;
+    color: #8159C3;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.tekst{
+    padding: 10px;
+    padding-top: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.tekst h1{
+    margin-bottom: 20px;
+}
+
+/*swipe*/
+.swipe-container {
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+}
+
+
+.swipe img {
+    box-shadow: 0 5px 15px #c573d9;
+    border-radius: 15px;
+    display: none;
     width: 100%;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    max-height: 320px;
 }
 
-#projects .project-card h3 {
-    font-size: 1.25rem; /* 20px */
-    color: #6b46c1; /* Fioletowy kolor */
-    margin-bottom: 0.5rem;
-}
-
-#projects .project-card p {
-    font-size: 1rem; /* 16px */
-    color: #4a5568; /* Szary kolor */
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    font-size: 1rem; /* 16px */
-    color: #4a5568; /* Szary kolor */
-    margin-bottom: 0.5rem;
+.swipe img.active {
     display: block;
 }
 
-form input, form textarea {
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8159C3; /* Fioletowe tło */
+    color: white; /* Białe strzałki */
+    border: none;
+    padding: 0.8rem; /* Zmniejszam nieco padding */
+    cursor: pointer;
+    border-radius: 50%; /* Zaokrąglone kształty */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #d6bcfa; /* Jasny fioletowy kolor */
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-form button {
-    background-color: #d69e2e; /* Żółty kolor */
-    color: #ffffff; /* Biały kolor dla tekstu */
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s;
+.modal-content {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
 }
 
-form button:hover {
-    background-color: #b7791f; /* Ciemniejszy żółty kolor */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*stopka*/
+.footer{
+    height: 120px;
+    background-color: white;
+    padding: 40px 25%;
+    color: #8159C3;
+}
+
+.footer h1{
+    margin-bottom: 10px;
+}
+
+.footer p {
+    text-align: right;
+}
+
+
+
+/* CSS dla urządzeń mobilnych */
+@media only screen and (max-width: 1000px){
+    header ul {
+        display: none;
+    }
+
+    .main{
+        padding: 10px 5%;
+        padding-bottom: 40px;
+        border-radius: 0% 0% 100% 100%/0% 0% 15% 15%
+    }
+    
+    .main p{
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px 5%;
+    }
+
+    .kafel {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        margin: 20px 0;
+    }
+
+    .tekst {
+        width: 100%;
+        text-align: center;
+    }
+
+    .swipe-container {
+        left: 0;
+        height: 300px;
+    }
+
+    .swipe img {
+        width: 100%;
+        height: auto;
+    }
+
+    .arrow {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer {
+        padding: 20px 5%;
+    }
+
+    .footer p {
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .swipe-container {
+        width: 95%;
+        display: flex;
+        justify-content: center; /* Wyśrodkuj zawartość w poziomie */
+        align-items: center; /* Wyśrodkuj zawartość w pionie, jeśli potrzebne */
+    }
+
+    .swipe img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto; /* Dodaj to, aby obrazy były wyśrodkowane */
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
 }

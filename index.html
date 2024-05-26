@@ -1,55 +1,108 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Graficzne</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 text-gray-900">
-
-    <!-- Nagłówek -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto p-4 flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Twoje Imię i Nazwisko</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#home" class="hover:text-blue-500">Strona Główna</a></li>
-                    <li><a href="#about" class="hover:text-blue-500">O mnie</a></li>
-                    <li><a href="#projects" class="hover:text-blue-500">Projekty</a></li>
-                </ul>
-            </nav>
-        </div>
+<body>
+    <header>
+        <h1>Adam Grabowski</h1>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Strona Główna -->
-    <section id="home" class="container mx-auto p-8 text-center">
-        <h2 class="text-4xl font-bold mb-4">Witaj na moim portfolio!</h2>
-        <p class="mb-8">Jestem grafikiem komputerowym. Oto moje prace.</p>
-        <a href="#projects" class="bg-500 text-white py-2 px-4 rounded">Zobacz moje prace</a>
-    </section>
+    <div class="main">
+        <h1>O mnie</h1>
+        <p>Mam 18 lat, uczęszczam do szkoły na profil Technik Informatyk. Cechuje mnie biegła obsługa programów Affinity Designer praz Adobe After Effects. Ponadto dobrze odnajduję się również w innych programach od Adobe: Photoshop, Animate oraz Ilustrator. Poza grafiką interesuję się szeroko pojętą technologią oraz gotowaniem. Szukam pracy, którą mógłbym wykonywać poza szkołą lub w okresie wakacji dlatego też interesuje mnie tryb pracy hybrydowej lub zdalnej oraz elastyczny czas pracy.</p>
+        <h1>Doświadczenie</h1>
+        <p>Przez ostatnie trzy lata pracowałem nad wieloma indywidualnymi projektami, które obejmowały zarówno tworzenie grafik komputerowych, jak i ilustracji cyfrowych. Moje projekty były realizowane dla klientów z różnych branż, co pozwoliło mi na zdobycie wszechstronnych umiejętności i elastyczności w podejściu do zadań. Większość projektów, które stworzyłem miały na celu wykorzystanie ich w social media. Chociaż nie miałem stałej pracy, każdy projekt traktowałem z najwyższą starannością i zaangażowaniem.</p>
+        <div class="line"></div>
+    </div>
 
-    <!-- O mnie -->
-    <section id="about" class="container mx-auto p-8">
-        <h2 class="text-3xl font-bold mb-4">O mnie</h2>
-        <p class="mb-4">Tutaj napisz coś o sobie, swoim doświadczeniu i umiejętnościach.</p>
-        <!-- Dodaj więcej treści o sobie -->
-    </section>
-
-    <!-- Projekty -->
-    <section id="projects" class="container mx-auto p-8">
-        <h2 class="text-3xl font-bold mb-4">Moje projekty</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Tutaj dodaj swoje projekty -->
-            <div class="project-card">
-                <img src="teddy.png" alt="Opis projektu" class="mb-4">
-                <h3 class="text-xl font-bold">Tytuł projektu</h3>
-                <p>Krótki opis projektu.</p>
+    <div class="container" id="projects">
+        <h1>Moje prace i projekty</h1>
+        <div class="line"></div>
+        <div class="kafel">
+            <div class="tekst">
+                <h1>Banery social media</h1>
+                <h4>Banery przeznaczone do zaprezentowania startowej strony internetowej sklepu oraz banery stworzone dla twórców internetowych na ich kanały YouTube</h4>
             </div>
-            <!-- Powtórz dla każdego projektu -->
+            <div class="swipe-container">
+                <button class="arrow left-arrow">&#8592;</button>
+                <div class="swipe">
+                    <img src="banery/3 banners.png" alt="Image 1" class="active">
+                    <img src="banery/3.1 banners.png" alt="Image 2">
+                    <img src="banery/Baner.png" alt="Image 3">
+                    <img src="banery/untitled.png" alt="Image 4">
+                    <img src="banery/pokemon.png" alt="Image 5">
+                </div>
+                <button class="arrow right-arrow">&#8594;</button>
+            </div>
         </div>
-    </section>
 
+        <div class="kafel">
+            <div class="tekst">
+                <h1>Projekt "Teddy Shirt"</h1>
+                <h4>Mój najnowszy autorski projekt jakim jest marka ubraniowa Teddy Shirt. Aktualnie w procesie tworzenia wszystkich grafik, mockup'ów oraz testowania jakości materiałów</h4>
+            </div>
+            <div class="swipe-container">
+                <button class="arrow left-arrow">&#8592;</button>
+                <div class="swipe">
+                    <img src="teddy/mockup.png" alt="Image 2-1" class="active">
+                    <img src="teddy/logo.png" alt="Image 2-2">
+                    <img src="teddy/miś_nieb.png" alt="Image 2-3">
+                    <img src="teddy/miś_róż.png" alt="Image 2-4">
+                    <img src="teddy/kwiat.png" alt="Image 2-5">
+                    <img src="teddy/żaba.png" alt="Image 2-6">
+                    <img src="teddy/kaczka.png" alt="Image 2-7">
+                    <img src="teddy/świnka.png" alt="Image 2-8">
+                </div>
+                <button class="arrow right-arrow">&#8594;</button>
+            </div>
+        </div>
+
+        <div class="kafel">
+            <div class="tekst">
+                <h1>Pojedyńcze prace</h1>
+                <h4>Są to prace, których ilośc nie pozwala stworzyć osobnej kategorii. Znajdują się tutaj projekty takie jak: ulotki, ikony, loga, miniaturki filmów na YouTube oraz moje cyfrowe rysunki</h4>
+            </div>
+            <div class="swipe-container">
+                <button class="arrow left-arrow">&#8592;</button>
+                <div class="swipe">
+                    <img src="inne/ulotka.png" alt="Image 3-1" class="active">
+                    <img src="inne/all_icons.png" alt="Image 3-2">
+                    <img src="inne/logo_1.jpg" alt="Image 3-3">
+                    <img src="inne/woda.png" alt="Image 3-4">
+                    <img src="inne/miniaturki_among.png" alt="Image 3-5">
+                    <img src="inne/miniaturki_minecraft_2.png" alt="Image 3-6">
+                    <img src="inne/2023.png" alt="Image 3-7">
+                    <img src="inne/2024.png" alt="Image 3-8">
+                    <img src="inne/luźne.png" alt="Image 3-9">
+                </div>
+                <button class="arrow right-arrow">&#8594;</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer" id="footer">
+        <div>
+            <h1>Kontakt</h1>
+            <h4>tel: +48 660 182 483</h4>
+            <h4>e-mail: adam.grabowski@onet.com.pl</h4>
+        </div>
+        <p>wykonanie: Adam Grabowski</p>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    <script src="plik.js"></script>
 </body>
 </html>
